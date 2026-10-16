@@ -1,0 +1,52 @@
+# Este repositorio publica SOLO frontend/ (y la infraestructura mínima
+# para publicarlo: .github/workflows/). Todo lo demás es backend o
+# documentación interna que puede revelar el ID real de la Google
+# Sheet, el nombre de la propiedad de la clave de OpenRouter, o detalles
+# internos de la arquitectura — no debe estar en un repositorio público.
+# .gitignore NO borra nada del disco ni desrastrea archivos ya
+# versionados por sí solo (eso se hizo aparte con `git rm --cached`).
+
+# ---- Backend de Google Apps Script (incluye la copia consolidada) ----
+/backend/
+
+# ---- Documentación interna de despliegue (revela el ID de la Sheet) ----
+/deployment/
+
+# ---- README interno (menciona el ID real de la Sheet y arquitectura privada) ----
+/README.md
+
+# ---- Credenciales, tokens, claves privadas ----
+*.env
+.env.*
+!.env.example
+*.pem
+*.key
+*secret*
+*credentials*
+
+# ---- Configuración local con identificadores/URLs privadas ----
+*.local.*
+local.settings.json
+
+# ---- Pruebas, registros, temporales, depuración ----
+*.log
+npm-debug.log*
+*.tmp
+.tmp/
+tmp/
+
+# ---- Dependencias, caché, build ----
+node_modules/
+.cache/
+dist/
+build/
+
+# ---- Sistema operativo / editor ----
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+
+# ---- Configuración local de herramientas de IA/agentes ----
+.antigravity/
+.claude/settings.local.json
